@@ -1,0 +1,26 @@
+Create User & Set Password:
+
+sudo useradd -m Sarah
+sudo passwd Sarah
+sudo useradd -m mike
+sudo passwd mike
+
+Verify the user created:
+
+cat /etc/passwd
+cat /etc/passwd | grep -E "Sarah|mike"
+
+
+Create User Directory:
+ 
+sudo mkdir /home/Sarah/workspace
+sudo mkdir /home/mike/workspace
+sudo chown Sarah:Sarah /home/Sarah/workspace
+sudo chown mike:mike /home/mike/workspace
+sudo chmod 700 /home/Sarah/workspace
+sudo chmod 700 /home/mike/workspace
+
+Verify the directory with access:
+
+ls -ld /home/Sarah/workspace
+ls -ld /home/mike/workspace

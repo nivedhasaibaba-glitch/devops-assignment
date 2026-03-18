@@ -1,0 +1,45 @@
+===== SYSTEM MONITOR REPORT =====
+Wed Mar 11 16:12:04 UTC 2026
+CPU & MEMORY
+top - 16:12:04 up  6:25,  1 user,  load average: 0.00, 0.01, 0.00
+Tasks:  28 total,   1 running,  27 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni, 99.4 id,  0.6 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  15780.2 total,  14998.6 free,    635.8 used,    347.4 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  15144.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+      1 root      20   0   21964  12476   9404 S   0.0   0.1   0:01.07 systemd
+      2 root      20   0    3120   2048   1920 S   0.0   0.0   0:00.06 init-sy+
+      6 root      20   0    3136   1792   1792 S   0.0   0.0   0:00.00 init
+     52 root      19  -1   66756  18552  17656 S   0.0   0.1   0:00.49 systemd+
+    112 root      20   0   25276   6400   4864 S   0.0   0.0   0:02.24 systemd+
+    123 systemd+  20   0   21460  12160  10240 S   0.0   0.1   0:00.12 systemd+
+    124 systemd+  20   0   91028   7808   6912 S   0.0   0.0   0:00.31 systemd+
+    195 root      20   0    4236   2560   2304 S   0.0   0.0   0:00.05 cron
+DISK USAGE
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdd       1007G  1.6G  955G   1% /
+rootfs          7.8G  2.7M  7.7G   1% /init
+none            7.8G     0  7.8G   0% /dev/shm
+none            7.8G  544K  7.8G   1% /run
+none            7.8G     0  7.8G   0% /run/lock
+none            7.8G  140K  7.8G   1% /run/user
+tmpfs           1.6G   20K  1.6G   1% /run/user/1000
+drivers         952G  193G  760G  21% /usr/lib/wsl/drivers
+none            7.8G     0  7.8G   0% /usr/lib/wsl/lib
+none            7.8G  4.0K  7.8G   1% /mnt/wsl
+none            7.8G   76K  7.8G   1% /mnt/wslg/versions.txt
+none            7.8G   76K  7.8G   1% /mnt/wslg/doc
+none            7.8G     0  7.8G   0% /usr/lib/modules/6.6.87.2-microsoft-standard-WSL2
+C:\             952G  193G  760G  21% /mnt/c
+TOP PROCESSES
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+nived       2662  0.0  0.0   6176  5248 pts/2    Ss   15:59   0:00 -bash
+root         112  0.0  0.0  25276  6400 ?        Ss   09:46   0:02 /usr/lib/systemd/systemd-udevd
+polkitd     2969  0.0  0.0 308164  7552 ?        Ssl  16:01   0:00 /usr/lib/polkit-1/polkitd --no-debug
+root        2660  0.0  0.0   3144  1164 ?        S    15:59   0:00 /init
+root           1  0.0  0.0  21964 12476 ?        Ss   09:46   0:01 /sbin/init
+root          52  0.0  0.1  66756 18552 ?        S<s  09:46   0:00 /usr/lib/systemd/systemd-journald
+systemd+     124  0.0  0.0  91028  7808 ?        Ssl  09:46   0:00 /usr/lib/systemd/systemd-timesyncd
+nived       1678  0.0  0.0   6200  5120 pts/0    Ss+  12:18   0:00 -bash
+message+     196  0.0  0.0   9648  4864 ?        Ss   09:46   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
